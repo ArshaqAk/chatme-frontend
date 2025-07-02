@@ -30,7 +30,6 @@ const Home = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen text-white flex flex-col md:flex-row">
-      {/* Sidebar */}
       <div className="md:w-1/4 w-full bg-gray-800 p-4 flex flex-col items-start">
         <div className="flex items-center gap-2 mb-6">
           <FaUserCircle size={24} />
@@ -41,15 +40,12 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Chat Area */}
       <div className="flex-1 flex flex-col p-4">
-        {/* Header */}
         <div className="flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-md mb-2">
           <FaUserCircle size={20} />
           <h3 className="text-lg font-medium">Chat</h3>
         </div>
 
-        {/* Messages Display */}
         <div className="flex-1 overflow-y-auto p-3 rounded mb-3 custom-scrollbar">
           {messages.map((item, i) => (
             <div key={i} className={`mb-2 ${item.self ? 'text-right' : 'text-left'}`}>
@@ -62,7 +58,6 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Input */}
         <div className="flex gap-3">
           <input
             type="text"
